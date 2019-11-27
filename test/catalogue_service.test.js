@@ -24,8 +24,8 @@ describe("catologueService.countBooksByKeyword", () => {
   test("returns the number of books containing the given keyword", () => {
     expect(catalogueService.countBooksByKeyword("pineapple")).toBe(0);
   });
-  //test("returns the number of books containing the given keyword", () => {
-   // expect(catalogueService.countBooksByKeyword(3)).toBe(0);
+  test("returns the number of books containing the given keyword", () => {
+   expect(catalogueService.countBooksByKeyword(3)).toBe(0);
 });
 
 
@@ -38,5 +38,6 @@ describe("catalogueService.getBooksByAuthor", () => {
         "Great Expectations by Charles Dickens"
       ]
     )
-  })
-})
+  });
+});
+});

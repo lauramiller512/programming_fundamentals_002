@@ -50,7 +50,7 @@ function countBooksByKeyword(keyword) {
   let numOfBooks = 0;
   for (let i = 0; i < catalogue.length; i++) {
     let b = catalogue[i];
-    if (typeof keyword === keyword) {
+    if (typeof keyword === typeof b) {
       if (b.toUpperCase().includes(keyword.toUpperCase())) {
         numOfBooks++;
       }
