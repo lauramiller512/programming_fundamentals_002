@@ -1,0 +1,11 @@
+function countBooksByFirstLetter(letter) {
+      let numOfBooks = 0; 
+  for (let i = 0; i < catalogue.length; i++) {
+   let b = catalogue[i];
+   if (b.startsWith(letter)) {
+      numOfBooks++;
+    }
+   }
+   return numOfBooks;
+ }
+}

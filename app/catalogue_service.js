@@ -23,23 +23,47 @@ const catalogue = [
 ];
 
 function countBooks() {
-  // Your code here
+  return catalogue.length;
 }
 
 function checkBook(book) {
-  // Your code here
+  for (let i = 0; i < catalogue.length; i++) {
+    if (catalogue[i] == book) {
+      return true;
+    }
+  }
+  return false;
 }
 
 function countBooksByFirstLetter(letter) {
-  // Your code here
+  let numOfBooks = 0;
+  for (let i = 0; i < catalogue.length; i++) {
+    let b = catalogue[i];
+    if (b.startsWith(letter)) {
+      numOfBooks++;
+    }
+  }
+  return numOfBooks;
 }
 
 function countBooksByKeyword(keyword) {
-  // Your code here
+  let numOfBooks = 0;
+  for (let i = 0; i < catalogue.length; i++) {
+    let b = catalogue[i];
+    if (b.toUpperCase().includes(keyword.toUpperCase())) {
+      numOfBooks++;
+    }
+  } return numOfBooks;
 }
 
 function getBooksByAuthor(author) {
-  // Your code here
+  let newArray = [];
+  for (let i =0; i < catalogue.length; i++) {
+    let book = catalogue[i];
+    if (book.includes(author)) {
+      newArray.push(book);
+  }
+} return newArray;
 }
 
 module.exports = {
@@ -48,4 +72,4 @@ module.exports = {
   countBooksByFirstLetter,
   countBooksByKeyword,
   getBooksByAuthor
-};
+}
